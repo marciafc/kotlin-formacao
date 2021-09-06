@@ -157,9 +157,9 @@
 
     - control + d => replica linha
     
-   - F5 em cima da classe => cria uma nova classe com outro nome e mesmo conteúdo da primeira
+    - F5 em cima da classe => cria uma nova classe com outro nome e mesmo conteúdo da primeira
 
-  - Shift + F6: rename
+    - Shift + F6: rename
 
 ## Reference
 
