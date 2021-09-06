@@ -16,6 +16,10 @@
 
   - [Primitive data types and their limitations](https://khan.github.io/kotlin-for-python-developers/#primitive-data-types-and-their-limitations)
 
+## Modificadores de acesso
+
+  - [Visibility modifiers](https://kotlinlang.org/docs/visibility-modifiers.html)
+
 ## Aprender Kotlin
 
   - [Play Example](https://play.kotlinlang.org/byExample/overview)
@@ -51,7 +55,10 @@
     - Dentro de outra classe
       
     - Em arquivo separado (arquivo só para a classe)
+  
+  - Funções membros == métodos == comportamentos
 
+  - Quando não retorna nada explícito, está retornando Unit do Kotlin (é implícito)
 
 ## Reference
 

@@ -35,7 +35,6 @@ fun main() {
 }
 
 fun deposita(conta: Conta, valor: Double){
-    conta.numero
     conta.saldo += valor
 }
 
