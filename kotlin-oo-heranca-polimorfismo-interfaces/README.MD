@@ -66,7 +66,28 @@
       - internal: restringe o acesso para o módulo do projeto
         
         - Módulo => melhor discussão com uso de [build tools](https://medium.com/@alex.felipe/entenda-o-que-s%C3%A3o-build-tools-do-mundo-java-682a26e38ff2) 
+
+  - [Aula5](src/main/kotlin/aula5/main.kt)
     
+    - Herança com múltiplas classes
+      
+      - FuncionarioAdmin
+        
+        - [Gerente](src/main/kotlin/aula5/Gerente.kt) herda de [FuncionarioAdmin (abstract)](src/main/kotlin/aula5/FuncionarioAdmin.kt) que herda de [Funcionario (abstract)](src/main/kotlin/aula5/Funcionario.kt)
+        
+        - [Diretor](src/main/kotlin/aula5/Diretor.kt) herda de [FuncionarioAdmin (abstract)](src/main/kotlin/aula5/FuncionarioAdmin.kt) que herda de [Funcionario (abstract)](src/main/kotlin/aula5/Funcionario.kt)
+          
+      - Funcionario comum
+        
+        - [Analista](src/main/kotlin/aula5/Analista.kt) herda de [Funcionario (abstract)](src/main/kotlin/aula5/Funcionario.kt)
+        
+        - [Auxiliar](src/main/kotlin/aula5/Auxiliar.kt) herda de [Funcionario (abstract)](src/main/kotlin/aula5/Funcionario.kt)
+        
+    - Polimorfismo
+      
+      - FuncionarioAdmin ou Funcionario comum 
+        
+      - Nem sempre o polimorfismo com herança resolve todos os casos
     
 ## Notas
 
