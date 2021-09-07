@@ -89,6 +89,35 @@
         
       - Nem sempre o polimorfismo com herança resolve todos os casos
     
+  - [Aula6](src/main/kotlin/aula6/main.kt)
+    
+    - Polimorfismo com uso de [interface](https://kotlinlang.org/docs/interfaces.html)
+      
+      - permite usar para Funcionario, Cliente ou qualquer outra classe
+    
+      - Exemplos:
+        
+        - [Cliente](src/main/kotlin/aula6/Cliente.kt) implementa [Autenticavel](src/main/kotlin/aula6/Autenticavel.kt)
+          
+        - [Diretor](src/main/kotlin/aula6/Diretor.kt) herda [FuncionarioAdmin](src/main/kotlin/aula6/FuncionarioAdmin.kt) que herda de [Funcionario](src/main/kotlin/aula6/Funcionario.kt) e implementa [Autenticavel](src/main/kotlin/aula6/Autenticavel.kt)
+            
+        - Obs: [FuncionarioAdmin](src/main/kotlin/aula6/FuncionarioAdmin.kt) / [Cliente](src/main/kotlin/aula6/Cliente.kt) estão com a 'senha' como 'protected' => somente seus filhos podem ter acesso (informação sensível)
+        
+      - Diferença entre **interface** e **classe abstrata**: [interface não mantém estado](https://kotlinlang.org/docs/interfaces.html)
+        
+        - Não tem construtor
+          
+        - Pode ter properties, mas serão abstratas ou prover implementação de acesso
+    
+      - Interface pode ter uma implementação default
+        - Como não mantém estado, necessário informar para a interface via property abstrata (property terá **override** na classe filha)
+          - Atentar com informações sensíveis, pois não terá qualquer restrição quanto ao acesso
+        - Se houver conflito (mesma assinatura), fazer override defindo qual implementação irá utilizar em cada classe filha
+    
+    - **Herança** usada para um contexto específico
+      
+    - **Interface** é um contrato, usar para referências que fogem do contexto da classe
+
 ## Notas
 
   - Kotlin permite converter função em property
