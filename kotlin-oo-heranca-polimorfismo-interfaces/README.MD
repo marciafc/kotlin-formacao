@@ -37,6 +37,36 @@
   - [Aula3](src/main/kotlin/aula3/main.kt)
     
     - Polimorfismo
+
+  - [Aula4](src/main/kotlin/aula4/main.kt)
+
+    - classe abstrata: abstract - vide [Funcionario](src/main/kotlin/aula4/Funcionario.kt) ou [Conta](src/main/kotlin/aula4/Conta.kt) 
+      
+      - Não será mais possível instanciá-la
+      - Não precisa OPEN, a classe já é aberta
+        
+    - membros abstratos - vide [Funcionario](src/main/kotlin/aula4/Funcionario.kt) ou [Conta](src/main/kotlin/aula4/Conta.kt)  
+      
+      - Não tem implementação (é só a assinatura) e quem herda, que deve implementar
+        - usar 'protected' (na property) para que cada um dos membros consigam modificar o property - vide [Conta](src/main/kotlin/aula4/Conta.kt) \ 'protected set' em 'saldo'
+      - Método abstract não precisa OPEN, já é aberto
+      - As classes que herdam nao podem mais chamar a implementacao da classe pai com super
+    
+    - Declarar um método sem implementação:
+      
+    ```      
+      override val bonificacao: Double
+        get() = TODO("Not yet implemented")
+    ```
+        
+    - [Modificadores de acesso](https://khan.github.io/kotlin-for-python-developers/#visibility-modifiers): public, private, protected, public, private ou internal
+      
+      - protected: classes filhas terão acesso
+        
+      - internal: restringe o acesso para o módulo do projeto
+        
+        - Módulo => melhor discussão com uso de [build tools](https://medium.com/@alex.felipe/entenda-o-que-s%C3%A3o-build-tools-do-mundo-java-682a26e38ff2) 
+    
     
 ## Notas
 
@@ -166,6 +196,8 @@
     - Shift + F6: rename
       
     - Alt + 1 => mostra / oculta a área do project src
+    
+    - Control + n => Buscar classes 
 
 ## Reference
 
