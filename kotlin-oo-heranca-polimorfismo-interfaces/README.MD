@@ -26,13 +26,17 @@
         - vide classe [Funcionario](src/main/kotlin/aula2/Funcionario.kt)
         - Erro caso não tenha open: This type is final, so it cannot be inherited from...
         
-      - Sobrescrever comportamentos herdados: usar palavras reservadas 'override' e 'open'
+      - Sobrescrever comportamentos herdados => usar palavras reservadas:
+        - 'override' (método da classe filha) e 
+        - 'open' (método da classe mãe)
         
     - Converter função em property (técnica do Kotlin)
       - vide classe [Funcionario](src/main/kotlin/aula2/Funcionario.kt) em bonificacao
       - Alt + Enter
     
-      
+  - [Aula3](src/main/kotlin/aula3/main.kt)
+    
+    - Polimorfismo
     
 ## Notas
 
@@ -160,6 +164,8 @@
     - F5 em cima da classe => cria uma nova classe com outro nome e mesmo conteúdo da primeira
 
     - Shift + F6: rename
+      
+    - Alt + 1 => mostra / oculta a área do project src
 
 ## Reference
 
