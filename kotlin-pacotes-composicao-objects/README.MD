@@ -19,6 +19,29 @@
     
     ```
 
+  - [Aula2](src/main/kotlin/br/com/alura/bytebank/aula2/main.kt)
+    - Composição
+      
+      - Evita que uma classe tenha membros desnecessários: fragmenta mais o código em classes que mantêm os membros que fazem sentido. Ex classe Endereço contém todas as informações de um endereço.  
+        
+      - A classe não é obrigada a manter os membros da classe que a compõe: o relacionamento é a classe ter outra, ela não vai ter as características da classe que a compõe, e sim a possibilidade de utilizá-la ou não.
+
+      - Composição X Herança
+
+        - [Como não aprender orientação a objetos: Herança](https://blog.caelum.com.br/como-nao-aprender-orientacao-a-objetos-heranca/)    
+      
+    - Property opcional: instanciar na declaração (exemplo [Cliente com atributo do tipo Endereco](src/main/kotlin/br/com/alura/bytebank/aula2/modelo/Cliente.kt)) e atributo com valor default (exemplo [Endereco](src/main/kotlin/br/com/alura/bytebank/aula2/modelo/Endereco.kt))
+      
+    ```
+    // instanciando ao declarar na classe Cliente
+    var endereco: Endereco = Endereco()
+    
+    // valor default na classe Endereco 
+    // opcional pode ser var OU val
+    var logradouro: String = ""
+    
+    ```
+
 ## Notas
 
   - Teclas de atalho IntelliJ
