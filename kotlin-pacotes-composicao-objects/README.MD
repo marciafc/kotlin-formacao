@@ -42,6 +42,36 @@
     
     ```
 
+  - [Aula3](src/main/kotlin/br/com/alura/bytebank/aula3/main.kt)
+    
+    - Variáveis globais
+      
+      - Exemplo [Conta](src/main/kotlin/br/com/alura/bytebank/aula3/modelo/Conta.kt)
+    
+      - [Object Declarations](https://kotlinlang.org/docs/object-declarations.html#object-declarations-overview)
+
+        - Ex [main](src/main/kotlin/br/com/alura/bytebank/aula3/main.kt) -> ```${Conta.total}```
+
+        - Singleton, [Singleton_pattern - cases](https://en.wikipedia.org/wiki/Singleton_pattern#Common_uses)
+
+        - Tem nome (objeto anônimo - caso do "Object Expressions" - não tem nome)
+
+        - Fica em arquivo ou classe (pode usar [Companion Objects](https://kotlinlang.org/docs/object-declarations.html#companion-objects))
+            - Nome implícito é Companion (exceto se informar outro nome)
+        
+    - [Object Expressions](https://kotlinlang.org/docs/object-declarations.html#object-expressions)
+    
+      -  Objeto anônimo: palavra reservada 'object' (estrutura que não tem uma classe). Ex [main](src/main/kotlin/br/com/alura/bytebank/aula3/main.kt)
+         
+        - Permite utilizar herança, interface... polimorfismo
+         
+        -  Implementar classe sem ter que ter a classe propriamente dita. Ex definir comportamento de eventos de clique
+    
+    - [Constantes em tempo de compilação (Compile-Time Constants)](https://kotlinlang.org/docs/properties.html#compile-time-constants)
+      - const
+        
+    - Property pode ser importada ```import br.com.alura.bytebank.aula3.modelo.teste```
+
 ## Notas
 
   - Teclas de atalho IntelliJ
