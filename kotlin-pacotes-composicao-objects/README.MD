@@ -71,7 +71,48 @@
       - const
         
     - Property pode ser importada ```import br.com.alura.bytebank.aula3.modelo.teste```
-
+    
+  - [Aula4](src/main/kotlin/br/com/alura/bytebank/aula4/main.kt)    
+    
+    - Any: todas as classes herdam de Any
+      
+      - Any() do Kotlin é mapeado para Object do Java (interoperabilidade)
+      
+    - Tudo no Kotlin é um objeto (mesmo os tipos primitivos), inclusive o Unit.
+      
+      - Em runtime é convertido para um tipo primitivo, quando for o caso (exemplo do Int)
+      
+      - Unit é um objeto que representa algo que não é devolvido
+        
+      - Quando não definir retorno explicitamente, está devolvendo Unit
+        
+    -  MyClass? => '?' é para aceitar null 
+    
+    - Casting
+      
+      - converter => usar 'as' => ```funcionario as Funcionario```
+        
+      - verificar tipo (já faz o cast também) => usar 'is' => ```if (funcionario is Funcionario)```
+        - o cast só vale dentro do escopo do if
+        
+      - [Smart cast](https://kotlinlang.org/docs/typecasts.html#smart-casts) 
+        - if
+        - com uso do when
+          ```
+          when (admin) {
+            is FuncionarioAdmin -> {
+                println("Opções admin")
+            }
+            is Funcionario -> {
+                println("Opções comum")
+            }
+            else -> {
+                println("Opções reduzidas")
+            }
+          }  
+          ```  
+    
+    
 ## Notas
 
   - Teclas de atalho IntelliJ
