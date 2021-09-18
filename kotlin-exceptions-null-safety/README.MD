@@ -49,8 +49,9 @@
     }
     ```
     
-    - early return: mais significado, código comum em qualquer linguagem de programação    
-    
+    - expression do Kotlin vs. early return 
+      - early return: mais significado, código comum em qualquer linguagem de programação. Exemplo:    
+      
     ```
     val valorComTaxa: Double? = valorComTaxa(100.0)
 
@@ -61,10 +62,34 @@
         return null
     }
     ```
+    
+  - [Aula3](src/main/kotlin/br/com/alura/bytebank/aula3/main.kt)
+    
+    - [Lançar exception](https://kotlinlang.org/docs/exceptions.html) => usar throw
+      
+      - Exemplo 
+        - Lançando exceção: [Conta](src/main/kotlin/br/com/alura/bytebank/aula3/modelo/Conta.kt) => [SaldoInsuficienteException](src/main/kotlin/br/com/alura/bytebank/aula3/exception/SaldoInsuficienteException.kt)
+        - try, catch: [testaComportamentosConta](src/main/kotlin/br/com/alura/bytebank/aula3/teste/testaComportamentosConta.kt)
+        
+    - Throwable (ver **hierarquia com atalho do IntelliJ**): pai de TODAS exceptions 
+      
+      - Exception: casos capturados e tratados no código pelo dev
+        
+        - As exceções criadas devem herdar de Exception e não de Throwable (pai de todas, inclusive de Error)     
+        
+      - Error: idem a exception, mas refere-se a problemas na JVM, programador não lida com estes
+        - Ex: falta de memória
+      
+    - 'Exception' (e outras) no Kotlin usa **TypeAliases.kt** mapeando para o Java. Exemplo:
+      
+      ```@SinceKotlin("1.1") public actual typealias Exception = java.lang.Exception```    
 
 ## Notas
 
-  -
+  - IntelliJ atalhos
+
+    - Control + h => ver hierarquia de uma classe, quem herda de quem
+  
 
 ## Reference
 
