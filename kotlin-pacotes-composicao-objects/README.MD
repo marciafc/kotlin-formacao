@@ -96,8 +96,8 @@
         - o cast só vale dentro do escopo do if
         
       - [Smart cast](https://kotlinlang.org/docs/typecasts.html#smart-casts) 
-        - if
-        - com uso do when
+        - if com 'as'
+        - OU com uso do when
           ```
           when (admin) {
             is FuncionarioAdmin -> {
@@ -111,7 +111,24 @@
             }
           }  
           ```  
+  - [Aula5](src/main/kotlin/br/com/alura/bytebank/aula5/main.kt)
     
+    - Qualquer classe é um Any, por tanto tem equals(), hashCode() e toString()
+      - hashCode
+        - é o "RG" do objeto
+        - usa [número mágico 31](https://stackoverflow.com/questions/299304/why-does-javas-hashcode-in-string-use-31-as-a-multiplier) para calcular o hash code das properties (convenção entre linguagens - questão de performance)       
+      - equals e hasCode devem estar avaliando as mesmas properties, devem ser compatíveis     
+
+    - raw string (String pura)
+      - Exemplo [Endereco](src/main/kotlin/br/com/alura/bytebank/aula5/modelo/Endereco.kt) no toString()
+        
+    - trimIndent() remove linhas em branco no começo e no final
+    
+    - Validação se é null ocorre com a interrogação '?' Ex ```if (javaClass != other?.javaClass)```
+    
+    - Devolver mais de um valor: Pair ou Triple Ex [main.kt](src/main/kotlin/br/com/alura/bytebank/aula5/main.kt)
+     
+      ```Pair<Endereco, Endereco>``` 
     
 ## Notas
 
