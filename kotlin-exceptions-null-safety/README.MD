@@ -84,6 +84,58 @@
       
       ```@SinceKotlin("1.1") public actual typealias Exception = java.lang.Exception```    
 
+  - [Aula4](src/main/kotlin/br/com/alura/bytebank/aula4/main.kt)
+    
+    - Capturando mais de uma exception
+      
+      - [Conta, método transfere() ](src/main/kotlin/br/com/alura/bytebank/aula4/modelo/Conta.kt)
+      - [testaComportamentosConta](src/main/kotlin/br/com/alura/bytebank/aula4/teste/testaComportamentosConta.kt)
+      - [SaldoInsuficienteException](src/main/kotlin/br/com/alura/bytebank/aula4/exception/SaldoInsuficienteException.kt), [FalhaAutenticacaoException](src/main/kotlin/br/com/alura/bytebank/aula4/exception/FalhaAutenticacaoException.kt)
+        
+      ```      
+        try {
+            
+        } catch (e: SaldoInsuficienteException){
+        
+        } catch (e: FalhaAutenticacaoException){
+        
+        } catch (e: Exception){
+        
+        }  
+      ```  
+      
+    - Criar exceção aceitando argumento opcional. Caso não informe, tem valor default:
+      
+      ```
+      class SaldoInsuficienteException(
+        mensagem: String = "O saldo é insuficiente"
+      ) : Exception(mensagem)
+      ```    
+      
+    - [Checked exceptions no Kotlin](https://kotlinlang.org/docs/exceptions.html#checked-exceptions)
+      - Kotlin opera na JVM, mas não possui exceções checked
+
+    - Padrão [Delegation](https://en.wikipedia.org/wiki/Delegation_pattern)    
+
+      - Exemplo [Conta, override do método autentica() ](src/main/kotlin/br/com/alura/bytebank/aula4/modelo/Conta.kt)
+      
+      - Maneira mais objetiva de implementar no Kotlin => delegação de propriedade (Property delegation)
+        
+        - Alterar implementação [Conta, override do método autentica() ](src/main/kotlin/br/com/alura/bytebank/aula4/modelo/Conta.kt) para usar 'Autenticavel by titular', assim:
+          
+        ```
+        abstract class Conta(
+            val titular: Cliente,
+            val numero: Int
+        ) : Autenticavel by titular
+        
+        // Remover o método abaixo 
+        override fun autentica(senha: Int): Boolean {
+            // ...
+        }    
+      
+        ```
+    
 ## Notas
 
   - IntelliJ atalhos
