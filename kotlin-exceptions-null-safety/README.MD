@@ -135,6 +135,40 @@
         }    
       
         ```
+  - [Aula5](src/main/kotlin/br/com/alura/bytebank/aula5/main.kt)
+  
+    - Tipos nullable e non-null
+    
+      - var endereco: Endereco? = null // aceita um endereço null
+
+      - var endereco: Endereco = null // NÃO aceita um endereço null, erro de compilação
+    
+    - [Null Safety](https://kotlinlang.org/docs/null-safety.html#null-safety) = evitar NPE
+    
+      - Ao identificar a possibilidade de referência nula, o compilador do Kotlin não compila
+        
+      - Testar null com "**if expression**" ou **if "normal"** (testando se é null)
+        
+      - [Safe call operator](https://kotlinlang.org/docs/null-safety.html#safe-calls) (?.)
+        - Desnecessário utilizá-lo em variáveis não null
+        - Necessário realizar chamadas encadeadas usando safe call, quando for acessar os membros
+          ```
+          endereco?.logradouro?.length?.toUByte()
+          ```
+      - [let](https://kotlinlang.org/docs/scope-functions.html#let) (scope functions - let é uma função de escopo)
+        - Não precisa fazer o safe call encadeado, faz o safe call só na primeira chamada
+        - Pode nomear e definir seu tipo com lambda OU usar nome implícito 'it'
+          
+      - [Elvis Operator](https://kotlinlang.org/docs/null-safety.html#elvis-operator) (é uma syntax sugar): combina safe call com ?:
+        - Retornar valor
+        - Criar exceção
+          
+      - [Safe casts](https://kotlinlang.org/docs/null-safety.html#safe-casts)
+        - Faz um cast seguro (similar a um smart cast), se não conseguir, o valor será null
+        - Evita ClassCastException
+    
+      - [Non-null assertion operator](https://kotlinlang.org/docs/null-safety.html#the-operator) (!!) -> assume que não é null, pode causar NullPointerException (NPE)
+        - NPE-lovers
     
 ## Notas
 
