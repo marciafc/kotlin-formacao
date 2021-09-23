@@ -175,8 +175,7 @@
   - IntelliJ atalhos
 
     - Control + h => ver hierarquia de uma classe, quem herda de quem
-  
-
+    
 ## Reference
 
   - [Kotlin: lidando com exceptions e referências nulas - Github Alura](https://github.com/alura-cursos/kotlin-exceptions-null-safety)
